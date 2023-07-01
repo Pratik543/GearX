@@ -1,0 +1,36 @@
+<!------------------- Shop Body -->
+<section class="text-gray-600 body-font shop-bg">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-wrap -m-4">
+      <% gears.forEach(function(gear){ %>
+
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full rounded-2xl">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img
+            alt="ecommerce"
+            class="object-cover object-center w-full h-full block"
+            src="/public/img/<%= gear.image %>"
+          />
+        </a>
+        <div class="mt-4">
+          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
+            <%= gear.category %>
+          </h3>
+          <h2 class="text-gray-900 title-font text-lg font-medium">
+            <%= gear.name %>
+          </h2>
+          <div class="flex justify-around">
+            <span class="mt-1 font-bold text-lg">₹<%= gear.price %></span>
+            <button
+              data-gears="<%= JSON.stringify(gear)%>"
+              class="add-to-cart py-1 px-6 r rounded-full flex items-center font-bold"
+            >
+              <span>+</span><span>Add</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <% }) %>
+    </div>
+  </div>
+</section>
