@@ -15,13 +15,8 @@ const PORT = process.env.PORT || 9000;
 // Database connection
 
 mongoose
-  .connect(process.env.MONGODB_URL, {
-    useNewUrlParser: true,
-    // useCreateIndex: true,    TODO: COMMENT IF GOT AN ERROR
-    useUnifiedTopology: true,
-    //   // useFindAndModify: true,    TODO: COMMENT IF GOT AN ERROR
-  })
-  .then(() => console.log("Connected Successfully"))
+  .connect(process.env.MONGODB_URL)
+  .then(() => console.log("Database Connected Successfully"))
   .catch((err) => {
     console.error(err);
   });
@@ -36,7 +31,7 @@ app.use(
     }),
     saveUninitialized: false,
     cookie: { maxAge: 1000 * 60 * 60 * 24 },
-  })
+  }),
 );
 
 // Passport config
@@ -99,5 +94,5 @@ app.use((req, res) => {
 });
 
 const server = app.listen(PORT, () =>
-  console.log(`Server running on port ${PORT}`)
+  console.log(`Server running on port ${PORT}`),
 );
