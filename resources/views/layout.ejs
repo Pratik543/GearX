@@ -2,11 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
-      rel="stylesheet"
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
     />
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
@@ -17,7 +19,10 @@
       href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
     />
 
-    <link rel="stylesheet" href="/public/css/app.css" />
+    <link
+      rel="stylesheet"
+      href="/public/css/app.css"
+    />
     <title>GearX</title>
   </head>
   <body>
@@ -30,20 +35,35 @@
           class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
           href="/"
         >
-          <img src="/public/img/gearxlogo.png" alt="" />
+          <img
+            src="/public/img/gearxlogo.png"
+            alt=""
+          />
         </a>
         <nav
           class="md:ml-auto flex flex-wrap items-center text-base justify-center"
         >
           <li class="list-none">
-            <a class="mr-5" href="/">Home</a>
+            <a
+              class="mr-5"
+              href="/"
+              >Home</a
+            >
           </li>
           <li class="list-none">
-            <a class="mr-5" href="/shop">Shop</a>
+            <a
+              class="mr-5"
+              href="/shop"
+              >Shop</a
+            >
           </li>
           <% if(user) { %>
           <li class="list-none">
-            <form id="logout" method="post" action="/logout">
+            <form
+              id="logout"
+              method="post"
+              action="/logout"
+            >
               <a
                 onclick="document.getElementById('logout').submit()"
                 class="mr-5"
@@ -54,17 +74,31 @@
           </li>
           <% } else { %>
           <li class="list-none">
-            <a class="mr-5" href="/register">Register</a>
+            <a
+              class="mr-5"
+              href="/register"
+              >Register</a
+            >
           </li>
           <li class="list-none">
-            <a class="mr-5" href="/login">Login</a>
+            <a
+              class="mr-5"
+              href="/login"
+              >Login</a
+            >
           </li>
           <% } %>
           <li class="list-none">
-            <a href="/cart" class="cart-bg inline-flex px-4 py-2 rounded-full"
-              ><span id="cartCounter" class="text-white font-bold pr-2"
+            <a
+              href="/cart"
+              class="cart-bg inline-flex px-4 py-2 rounded-full"
+              ><span
+                id="cartCounter"
+                class="text-white font-bold pr-2"
                 ><%= session.cart ? session.cart.totalQty : '' %></span
-              ><img src="/public/img/cart.png" alt=""
+              ><img
+                src="/public/img/cart.png"
+                alt=""
             /></a>
           </li>
         </nav>
@@ -90,22 +124,30 @@
             </h2>
             <nav class="list-none mb-10">
               <li>
-                <a class="text-gray-500 hover:text-gray-200" href="#"
+                <a
+                  class="text-gray-500 hover:text-gray-200"
+                  href="#"
                   >About Us</a
                 >
               </li>
               <li>
-                <a class="text-gray-500 hover:text-gray-200" href="#"
+                <a
+                  class="text-gray-500 hover:text-gray-200"
+                  href="#"
                   >Privacy Policy</a
                 >
               </li>
               <li>
-                <a class="text-gray-500 hover:text-gray-200" href="#"
+                <a
+                  class="text-gray-500 hover:text-gray-200"
+                  href="#"
                   >Terms & Conditions</a
                 >
               </li>
               <li>
-                <a class="text-gray-500 hover:text-gray-200" href="#"
+                <a
+                  class="text-gray-500 hover:text-gray-200"
+                  href="#"
                   >Payment Options</a
                 >
               </li>
@@ -119,12 +161,16 @@
             </h2>
             <nav class="list-none mb-10">
               <li>
-                <a class="text-gray-500 hover:text-gray-200" href="/login"
+                <a
+                  class="text-gray-500 hover:text-gray-200"
+                  href="/login"
                   >Login</a
                 >
               </li>
               <li>
-                <a class="text-gray-500 hover:text-gray-200" href="/cart"
+                <a
+                  class="text-gray-500 hover:text-gray-200"
+                  href="/cart"
                   >View Cart</a
                 >
               </li>
@@ -147,7 +193,9 @@
               </li>
               <!-- <% } %> -->
               <li>
-                <a class="text-gray-500 hover:text-gray-200" href="/contact"
+                <a
+                  class="text-gray-500 hover:text-gray-200"
+                  href="/contact"
                   >Contact Us</a
                 >
               </li>
@@ -161,7 +209,10 @@
               Secure Payment Gateways
             </h2>
             <nav class="list-none mb-10">
-              <img src="/public/img/payment_methods.png" alt="" />
+              <img
+                src="/public/img/payment_methods.png"
+                alt=""
+              />
             </nav>
           </div>
         </div>
@@ -214,7 +265,14 @@
                 class="w-5 h-5"
                 viewBox="0 0 24 24"
               >
-                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <rect
+                  width="20"
+                  height="20"
+                  x="2"
+                  y="2"
+                  rx="5"
+                  ry="5"
+                ></rect>
                 <path
                   d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"
                 ></path>
@@ -234,7 +292,12 @@
                   stroke="none"
                   d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
                 ></path>
-                <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                <circle
+                  cx="4"
+                  cy="4"
+                  r="2"
+                  stroke="none"
+                ></circle>
               </svg>
             </a>
           </span>
@@ -242,6 +305,10 @@
       </div>
     </footer>
 
-    <script src="/public/js/app.js" type="application/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tailwindcss-cdn@3.4.10/tailwindcss.min.js"></script>
+    <script
+      src="/public/js/app.js"
+      type="application/javascript"
+    ></script>
   </body>
 </html>
